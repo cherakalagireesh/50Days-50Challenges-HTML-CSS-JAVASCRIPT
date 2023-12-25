@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+}
+
+.toggle {
+  width: 15rem;
+  height: 5rem;
+  background-color: #e24848;
+  border-radius: 5rem;
+  box-shadow: inset 0 0.2rem 1rem #555;
+  position: relative;
+  transition: background-color 0.5s;
+}
+
+.circle {
+  width: 0.5rem;
+  height: 0.5rem;
+  outline: 3rem solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: 2.25rem;
+  left: 2.5rem;
+  transition: left 0.5s;
+}
+
+#check:checked ~ .toggle .circle {
+  left: calc(100% - 2.5rem);
+}
+#check:checked ~ .toggle {
+  background-color: #3eb963;
+}

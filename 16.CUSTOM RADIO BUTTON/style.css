@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option {
+  width: 30rem;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.option label {
+  font-size: 5rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.option label::after {
+  content: "";
+  width: 5rem;
+  height: 5rem;
+  border: 0.5rem solid rgb(2, 139, 94);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+
+.option label::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(2, 139, 94);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 3rem;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.option input {
+  display: none;
+}
+
+input:checked ~ label::before {
+  opacity: 1;
+}

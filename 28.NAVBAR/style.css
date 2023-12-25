@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(191, 248, 226);
+  display: grid;
+  place-items: center;
+}
+
+.nav-bar {
+  width: 80rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: .3rem .3rem .3rem #aaa;
+}
+
+.nav-link {
+  width: 10rem;
+  height: 100%;
+  background-color: rgb(222, 223, 181);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link:first-child,
+.nav-link:last-child{
+    pointer-events: none;
+}
+
+
+.change.nav-link {
+  background-color: rgb(185, 197, 147);
+}
+.nav-link::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -102%;
+  background-color: rgb(191, 248, 226);
+  border-radius: 0 0 50% 50%;
+  transition: top 0.5s;
+}
+
+.change.nav-link::before {
+  top: -49%;
+}
+
+.prevElChange {
+  border-top-right-radius: 0.8rem;
+}
+
+.nextElChange {
+  border-top-left-radius: 0.8rem;
+}
+
+.nav-link i {
+  font-size: 2.5rem;
+  color: #333;
+  transition: font-size 0.4s, color 0.4s;
+}
+
+.change.nav-link i {
+  font-size: 3.5rem;
+  color: #fff;
+}

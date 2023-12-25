@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Dancing Script", cursive;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("images/bg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.nav-btn {
+  width: 6rem;
+  height: 6rem;
+  background-color: rgba(103, 182, 123, 0.9);
+  position: fixed;
+  top: 3rem;
+  right: 5rem;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 300;
+  transition: all 0.3s;
+}
+
+.change .nav-btn {
+  background-color: #fff;
+}
+
+.line {
+  width: 3.5rem;
+  height: 0.3rem;
+  background-color: #fff;
+  margin: 0.35rem 0;
+  transition: all 0.3s;
+}
+
+.change .line {
+  background-color: rgba(103, 182, 123, 0.9);
+}
+.change .line1 {
+  transform: translateY(0.95rem) rotateZ(45deg);
+}
+
+.change .line2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.change .line3 {
+  transform: translateY(-0.95rem) rotateZ(-45deg);
+}
+
+.bg-color {
+  width: 6em;
+  height: 6rem;
+  background-color: rgba(103, 182, 123, 0.9);
+  position: fixed;
+  top: 3rem;
+  right: 5rem;
+  border-radius: 50%;
+  z-index: 100;
+  transform: scale(0);
+  transition: all 0.4s;
+}
+
+.change .bg-color {
+  transform: scale(150);
+}
+
+.nav-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 200;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+
+.nav-item {
+  margin: 4vh 0;
+}
+
+.nav-link {
+  font-size: 3rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.change .nav-link {
+  opacity: 1;
+}
+
+.nav-link:hover {
+  letter-spacing: 1rem;
+}
